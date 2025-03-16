@@ -22,6 +22,24 @@ int main() {
     printf("%s\n", p_Person->name);
 
 
+    Person persons[20];
+    size_t persons_len = sizeof(persons) / sizeof(Person);
+    Person *p_Persons = persons;
+    for (int i = 0; i < persons_len; i++)
+    {
+        p_Persons->age = 2;
+        p_Persons++;
+    }
+    
+    p_Persons = persons;
+    
+    for (int i = 0; i < persons_len; i++)
+    {
+        printf("Person %i age is: %i\n", i + 1, p_Persons->age);
+        p_Persons++;
+    }
+
+
     char *str = "this is a string literal";
     char single_char = 'a';
     printf("%s\n", str);
