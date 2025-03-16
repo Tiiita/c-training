@@ -2,7 +2,32 @@
 #include <stdlib.h>
 #include "test.h"
 
+typedef struct Person
+{
+    char *name;
+    int age;
+} Person;
+
+
 int main() {
+    //strings
+
+    Person person = {"test", 2};
+    Person *p_Person = &person;
+
+    printf("%s\n", p_Person->name);
+
+
+    p_Person->name = "test2";
+    printf("%s\n", p_Person->name);
+
+
+    char *str = "this is a string literal";
+    char single_char = 'a';
+    printf("%s\n", str);
+    printf("%c", single_char);
+
+    printf("\n");
     //Stack alloc
     int a = 1000;
     int b = 6;
@@ -28,5 +53,6 @@ int main() {
     printf("Value of ptr2: %i", *ptr_2);
 
     free(ptr_2);
+
     return 0;
 }
