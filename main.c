@@ -13,8 +13,6 @@ int main() {
     printf("Ptr: %p\n", ptr);
     printf("Value: %i\n", (void *)*ptr);
 
-
-
     printf("\n\n");
 
     //Heap alloc
